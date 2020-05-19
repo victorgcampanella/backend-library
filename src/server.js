@@ -7,7 +7,7 @@ const routes = require('./routes')
 const app = express()
 app.use(cors())
 
-mongoose.connect('mongodb+srv://library:library2020@library-oqzqb.mongodb.net/library?retryWrites=true&w=majority', {
+mongoose.connect(`${process.env.MONGO_URL}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
